@@ -1,7 +1,7 @@
 import React from 'react';
 import Navbar from './navbar';
-import home from '../paginas/home';
-import { BrowserRouter as Router, Switch, Route, Routes } from 'react-router-dom';
+import Home from '../paginas/home';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Marcos from '../paginas/marcos';
 import Cis from '../paginas/cis';
 import Cobit from '../paginas/cobit';
@@ -17,16 +17,16 @@ function App() {
     <Router>
       <Navbar/>
       <Routes>
-        <Route path='/' exact component={home} />
-        <Route path='/marcos' component={Marcos} />
-        <Route path='/cis' component={Cis} />
-        <Route path='/cobit' component={Cobit} />
-        <Route path='/iso' component={Iso} />
-        <Route path='/itil' component={Itil} />
-        <Route path='/nist' component={Nist} />
-        <Route path='/nist2' component={Nist2} />
-        <Route path='/pci' component={Pci} />
-        <Route path='/recomendaciones' component={Recomendaciones} />
+        <Route path="/" exact element={<Home/>} />
+        <Route path='/marcos' element={<Marcos/>} />
+        <Route path='/cis' element={<Cis/>} />
+        <Route path='/cobit' element={<Cobit/>} />
+        <Route path='/iso' element={<Iso/>} />
+        <Route path='/itil' element={<Itil/>} />
+        <Route path='/nist' element={<Nist/>} />
+        <Route path='/nist2' element={<Nist2/>} />
+        <Route path='/pci' element={<Pci/>} />
+        <Route path='/recomendaciones' element={<Recomendaciones/>} />
       </Routes>
     </Router>
   );
